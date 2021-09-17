@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroupDirective } from '@angular/forms';
 
 import {
     AddEditCustomFieldsComponent as BaseAddEditCustomFieldsComponent
@@ -12,7 +13,8 @@ import { EventService } from 'jslib-common/abstractions/event.service';
     templateUrl: 'add-edit-custom-fields.component.html',
 })
 export class AddEditCustomFieldsComponent extends BaseAddEditCustomFieldsComponent {
-    constructor(i18nService: I18nService, eventService: EventService) {
-        super(i18nService, eventService);
+    constructor(i18nService: I18nService, eventService: EventService, fb: FormBuilder,
+        formGroupDirective: FormGroupDirective) {
+        super(i18nService, eventService, fb, formGroupDirective);
     }
 }

@@ -1,6 +1,5 @@
-import {
-    Component,
-} from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 import { EventService } from 'jslib-common/abstractions/event.service';
 
@@ -13,7 +12,7 @@ import {
     templateUrl: 'view-custom-fields.component.html',
 })
 export class ViewCustomFieldsComponent extends BaseViewCustomFieldsComponent {
-    constructor(eventService: EventService) {
-        super(eventService);
+    constructor(eventService: EventService, fb: FormBuilder) {
+        super(eventService, fb);
     }
 }

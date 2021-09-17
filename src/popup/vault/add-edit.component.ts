@@ -4,6 +4,7 @@ import {
     ActivatedRoute,
     Router,
 } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
 
 import { BrowserApi } from '../../browser/browserApi';
 
@@ -45,10 +46,10 @@ export class AddEditComponent extends BaseAddEditComponent {
         userService: UserService, collectionService: CollectionService,
         messagingService: MessagingService, private route: ActivatedRoute,
         private router: Router, private location: Location,
-        eventService: EventService, policyService: PolicyService,
+        eventService: EventService, policyService: PolicyService, fb: FormBuilder,
         private popupUtilsService: PopupUtilsService, private storageService: StorageService) {
         super(cipherService, folderService, i18nService, platformUtilsService, auditService, stateService,
-            userService, collectionService, messagingService, eventService, policyService);
+            userService, collectionService, messagingService, eventService, policyService, fb);
     }
 
     async ngOnInit() {
