@@ -53,6 +53,9 @@ jobs:
           npx tsc --noEmit --project ./libs/node/tsconfig.spec.json &
           npx tsc --noEmit --project ./libs/electron/tsconfig.spec.json
 
+      - name: Print jest config
+        run: npx jest --showConfig
+
       - name: Run tests
         run: |
           export NODE_OPTIONS=--max_old_space_size=6144
