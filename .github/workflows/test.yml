@@ -51,7 +51,6 @@ jobs:
             echo "Typechecking $p"
             npx tsc --noEmit --project $p
           done
-          wait
 
       - name: Print jest config
         run: npx jest --showConfig
