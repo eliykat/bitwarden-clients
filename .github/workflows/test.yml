@@ -48,14 +48,14 @@ jobs:
       - name: Run typechecking
         run: |
           for p in libs/**/tsconfig.spec.json; do
-            echo "Typechecking $p";
+            echo "Typechecking $p"
             npx tsc --noEmit --project $p &
           done
+          wait
 
       - name: Print jest config
         run: npx jest --showConfig
 
       - name: Run tests
         run: |
-          export NODE_OPTIONS=--max_old_space_size=6144
           npm run test
