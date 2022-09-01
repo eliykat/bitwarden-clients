@@ -10,6 +10,8 @@ import { ContainerService } from "@bitwarden/common/services/container.service";
 
 import { makeStaticByteArray, mockEnc } from "../../utils";
 
+const test: string = 1;
+
 describe("Send", () => {
   let data: SendData;
 
