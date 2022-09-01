@@ -18,7 +18,7 @@
     "lint:fix": "eslint . --cache --cache-strategy content --fix",
     "lint:clear": "rimraf .eslintcache",
     "prettier": "prettier --write .",
-    "test": "jest --logHeapUsage --runInBand",
+    "test": "jest",
     "test:watch": "jest --clearCache && jest --watch",
     "test:watch:all": "jest --watchAll",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
