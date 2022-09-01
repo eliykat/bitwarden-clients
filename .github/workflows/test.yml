@@ -49,7 +49,7 @@ jobs:
         run: |
           for p in libs/**/tsconfig.spec.json; do
             echo "Typechecking $p";
-            npx tsc --noEmit --project $p;
+            npx tsc --noEmit --project $p &;
           done
 
       - name: Print jest config
