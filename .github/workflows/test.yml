@@ -47,11 +47,10 @@ jobs:
       # See https://bitwarden.atlassian.net/browse/EC-497
       - name: Run typechecking
         run: |
-          npx tsc --noEmit --project ./libs/angular/tsconfig.spec.json &
-          npx tsc --noEmit --project ./libs/components/tsconfig.spec.json &
-          npx tsc --noEmit --project ./libs/common/tsconfig.spec.json &
-          npx tsc --noEmit --project ./libs/node/tsconfig.spec.json &
-          npx tsc --noEmit --project ./libs/electron/tsconfig.spec.json
+          for p in libs/**/tsconfig.spec.json; do
+            echo "Typechecking $p";
+            npx tsc --noEmit --project $p;
+          done
 
       - name: Print jest config
         run: npx jest --showConfig
